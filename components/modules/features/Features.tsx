@@ -55,7 +55,7 @@ export default function Features() {
 					className="text-center w-[500px] mx-auto"
 				/>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-[72px]">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-[72px] mt-12">
 					{featureList.map((feature) => (
 						<div
 							key={feature.id}

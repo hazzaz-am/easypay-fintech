@@ -10,7 +10,7 @@ export default function SectionHeader({
 	className?: string;
 }) {
 	return (
-		<div className={cn("space-y-1 mb-12", className)}>
+		<div className={cn("space-y-1", className)}>
 			<span className="text-base font-semibold leading-[150%] text-theme-secondary uppercase">
 				{subTitle}
 			</span>
