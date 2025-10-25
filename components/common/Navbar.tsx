@@ -23,7 +23,7 @@ export default function Navbar() {
 		));
 	};
 	return (
-		<nav className="flex items-center justify-between py-6 max-w-[1170px] mx-auto h-[121px]">
+		<nav className="flex items-center justify-between py-6 h-[121px]">
 			<Logo />
 			<menu className="flex space-x-8">{renderNavLinks()}</menu>
 			<div>
