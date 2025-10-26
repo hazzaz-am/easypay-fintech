@@ -1,4 +1,5 @@
 import Banner from "@/components/modules/banner/Banner";
+import CallToAction from "@/components/modules/call-to-action/CallToAction";
 import Features from "@/components/modules/features/Features";
 import Pricing from "@/components/modules/pricing/Pricing";
 import Security from "@/components/modules/security/Security";
@@ -14,6 +15,7 @@ export default function HomePage() {
 			<Security />
 			<Pricing />
 			<Testimonial />
+			<CallToAction />
 		</>
 	);
 }
