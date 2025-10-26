@@ -1,9 +1,9 @@
-import Navbar from "@/components/common/Navbar";
+import Navbar from "@/components/common/navbar/Navbar";
 import Image from "next/image";
 
 import appStore from "/public/images/hero/appStore.png";
-import playStore from "/public/images/hero/playStore.png";
 import bannerProfile from "/public/images/hero/bannerImg.png";
+import playStore from "/public/images/hero/playStore.png";
 import underline from "/public/images/hero/underline.png";
 
 export default function Banner() {
