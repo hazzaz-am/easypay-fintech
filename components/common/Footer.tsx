@@ -9,7 +9,7 @@ export default function Footer() {
 				backgroundPosition: "center",
 				backgroundSize: "cover",
 			}}
-			className="max-w-[1170px] mx-auto pb-8"
+			className="max-w-[1170px] mx-auto pb-8 pt-8"
 		>
 			<div className="flex items-center justify-between">
 				<div className="space-y-4 max-w-[278px]">

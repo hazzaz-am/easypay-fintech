@@ -6,6 +6,7 @@ import Pricing from "@/components/modules/pricing/Pricing";
 import Security from "@/components/modules/security/Security";
 import Testimonial from "@/components/modules/testimonial/Testimonial";
 import WorkingSteps from "@/components/modules/working-steps/WorkingSteps";
+import Insights from "@/components/modules/insights/Insights";
 
 export default function HomePage() {
 	return (
@@ -18,6 +19,7 @@ export default function HomePage() {
 			<Testimonial />
 			<CallToAction />
 			<FAQ />
+			<Insights />
 		</>
 	);
 }
