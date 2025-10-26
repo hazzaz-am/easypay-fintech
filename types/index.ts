@@ -15,4 +15,12 @@ interface IFeature {
 	icon: StaticImageData;
 }
 
-export type { ISecurity, IFeature };
+interface IWorkingStep {
+	id: string;
+	title: string;
+	description: string;
+	icon: StaticImageData;
+	border: boolean;
+}
+
+export type { ISecurity, IFeature, IWorkingStep };

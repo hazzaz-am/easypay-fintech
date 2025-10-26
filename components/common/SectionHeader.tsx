@@ -14,7 +14,7 @@ export default function SectionHeader({
 			<span className="text-sm lg:text-base font-semibold leading-[150%] text-theme-secondary uppercase">
 				{subTitle}
 			</span>
-			<h2 className="font-bold text-2xl lg:text-[40px] leading-[120%] text-theme-dark">
+			<h2 className="font-bold text-xl lg:text-[40px] leading-[120%] text-theme-dark">
 				{title}
 			</h2>
 		</div>

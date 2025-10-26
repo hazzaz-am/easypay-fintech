@@ -3,7 +3,11 @@ import hiddenFeesIcon from "/public/images/features/no-hidden-fees-icon.png";
 import digitalWalletIcon from "/public/images/features/wallet-icon.png";
 import transactionsIcon from "/public/images/features/transactions-icon.png";
 
-import { IFeature, ISecurity } from "@/types";
+import downloadIcon from "/public/images/how-works/download-pay-icon.png";
+import bankCardIcon from "/public/images/how-works/bank-card-icon.png";
+import payIcon from "/public/images/how-works/paying-icon.png";
+
+import { IFeature, ISecurity, IWorkingStep } from "@/types";
 
 // All Security Services Easy Pay provide
 export const securityServices: ISecurity[] = [
@@ -86,6 +90,34 @@ export const featureList: IFeature[] = [
 		description: "End-to-end encryption for all transactions.",
 		bgColor: "#F4EDFC",
 		icon: transactionsIcon,
+	},
+];
+
+// Steps to get started with Easy Pay
+export const workingSteps: IWorkingStep[] = [
+	{
+		id: "01",
+		title: "Download Easy Pay",
+		description:
+			"Get the Easy Pay app today from the App Store or Google Play hassle free.",
+		icon: downloadIcon,
+		border: false,
+	},
+	{
+		id: "02",
+		title: "Link your bank or card",
+		description:
+			"Easily connect your account in seconds with advanced security for peace of mind.",
+		icon: bankCardIcon,
+		border: true,
+	},
+	{
+		id: "03",
+		title: "Start paying",
+		description:
+			"Easily split bills, send money to friends, and make smooth online payments instantly.",
+		icon: payIcon,
+		border: false,
 	},
 ];
 
