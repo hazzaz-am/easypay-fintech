@@ -99,7 +99,7 @@ export const MovingClientLogos = ({
 				)}
 			>
 				{clientLogos.map((item) => (
-					<Image key={item.alt} src={item.src} alt={item.alt} />
+					<Image key={item.alt} src={item.src} alt={item.alt} width={100}/>
 				))}
 			</ul>
 		</div>

@@ -1,4 +1,9 @@
-import { ISecurity } from "@/types";
+import instantPaymentIcon from "/public/images/features/instant-payment-icon.png";
+import hiddenFeesIcon from "/public/images/features/no-hidden-fees-icon.png";
+import digitalWalletIcon from "/public/images/features/wallet-icon.png";
+import transactionsIcon from "/public/images/features/transactions-icon.png";
+
+import { IFeature, ISecurity } from "@/types";
 
 // All Security Services Easy Pay provide
 export const securityServices: ISecurity[] = [
@@ -52,6 +57,39 @@ export const securityServices: ISecurity[] = [
 	},
 ];
 
+// All Features of Easy Pay
+export const featureList: IFeature[] = [
+	{
+		id: crypto.randomUUID(),
+		title: "Instant payments",
+		description: "Send money to friends or family in real-time, for free.",
+		bgColor: "#F3F7FF",
+		icon: instantPaymentIcon,
+	},
+	{
+		id: crypto.randomUUID(),
+		title: "No hidden fees",
+		description: "Clear and simple pricing. Always be aware of your costs.",
+		bgColor: "#FBF6EF",
+		icon: hiddenFeesIcon,
+	},
+	{
+		id: crypto.randomUUID(),
+		title: "Digital wallet",
+		description: "Store money securely and make fast transfers or purchases.",
+		bgColor: "#EEF9FE",
+		icon: digitalWalletIcon,
+	},
+	{
+		id: crypto.randomUUID(),
+		title: "Secure transactions",
+		description: "End-to-end encryption for all transactions.",
+		bgColor: "#F4EDFC",
+		icon: transactionsIcon,
+	},
+];
+
+// Footer links
 export const footerLinks1: string[] = [
 	"Features",
 	"How it works",
