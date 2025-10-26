@@ -1,10 +1,10 @@
-import Navbar from "@/components/common/navbar/Navbar";
 import Image from "next/image";
 
 import appStore from "/public/images/hero/appStore.png";
-import bannerProfile from "/public/images/hero/bannerImg.png";
 import playStore from "/public/images/hero/playStore.png";
+import bannerProfile from "/public/images/hero/bannerImg.png";
 import underline from "/public/images/hero/underline.png";
+import Navbar from "@/components/common/navbar/Navbar";
 
 export default function Banner() {
 	return (
@@ -19,9 +19,9 @@ export default function Banner() {
 		>
 			<div className="max-w-[1170px] mx-auto">
 				<Navbar />
-				<div className="flex justify-between">
-					<div className="pt-20">
-						<div className="w-[638px]">
+				<div className="flex-col-reverse justify-between lg:flex-row">
+					<div className="pt-20 w-full lg:w-1/2">
+						<div className="max-w-[638px]">
 							<h4 className="text-base font-semibold text-theme-text uppercase">
 								EasyPayment
 							</h4>
@@ -41,16 +41,16 @@ export default function Banner() {
 							<Image
 								src={appStore}
 								alt="Apple Store"
-								className="cursor-pointer"
+								className="cursor-pointer hover:scale-105 transition-transform duration-300"
 							/>
 							<Image
 								src={playStore}
 								alt="Play Store"
-								className="cursor-pointer"
+								className="cursor-pointer hover:scale-105 transition-transform duration-300"
 							/>
 						</div>
 					</div>
-					<div>
+					<div className="w-full lg:w-1/2">
 						<Image src={bannerProfile} alt="Men" />
 					</div>
 				</div>

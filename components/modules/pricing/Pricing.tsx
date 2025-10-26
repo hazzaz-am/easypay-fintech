@@ -56,7 +56,7 @@ export default function Pricing() {
 			<SectionHeader
 				subTitle="PRICING"
 				title="Simple transparent pricing no hidden fees "
-				className="w-[490px] mx-auto text-center mb-12"
+				className="max-w-[490px] mx-auto text-center mb-12"
 			/>
 			<div
 				style={{

@@ -51,3 +51,16 @@ export const securityServices: ISecurity[] = [
 		border: false,
 	},
 ];
+
+export const footerLinks1: string[] = [
+	"Features",
+	"How it works",
+	"Security",
+	"Testimonial",
+];
+
+export const footerLinks2: string[] = [
+	"Privacy policy",
+	"Terms & conditions",
+	"404",
+];

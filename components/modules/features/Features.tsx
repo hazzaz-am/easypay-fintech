@@ -52,7 +52,7 @@ export default function Features() {
 				<SectionHeader
 					subTitle="features"
 					title="Why choose Easy Pay for effortless payments?"
-					className="text-center w-[500px] mx-auto"
+					className="text-center max-w-[500px] mx-auto"
 				/>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-[72px] mt-12">

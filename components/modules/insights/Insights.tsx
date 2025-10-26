@@ -92,7 +92,7 @@ export default function Insights() {
 				<SectionHeader
 					subTitle="INSIGHTS & RESOURCES"
 					title="Stay informed with the latest fintech trends"
-					className="w-[590px] mx-auto text-center mb-12"
+					className="max-w-[590px] mx-auto text-center mb-12"
 				/>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
