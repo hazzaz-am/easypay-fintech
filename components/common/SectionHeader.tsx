@@ -1,4 +1,7 @@
+"use client";
+
 import { cn } from "@/lib/utils";
+import { motion } from "motion/react";
 
 export default function SectionHeader({
 	subTitle,
@@ -10,13 +13,31 @@ export default function SectionHeader({
 	className?: string;
 }) {
 	return (
-		<div className={cn("space-y-1", className)}>
-			<span className="text-sm lg:text-base font-semibold leading-[150%] text-theme-secondary uppercase">
+		<motion.div
+			className={cn("space-y-1", className)}
+			initial={{ opacity: 0, y: -20 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			viewport={{ once: true, amount: 0.3 }}
+			transition={{ duration: 0.6, ease: "easeOut" }}
+		>
+			<motion.span
+				className="text-sm lg:text-base font-semibold leading-[150%] text-theme-secondary uppercase"
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				viewport={{ once: true }}
+				transition={{ duration: 0.5, delay: 0.2 }}
+			>
 				{subTitle}
-			</span>
-			<h2 className="font-bold text-xl lg:text-[40px] leading-[120%] text-theme-dark">
+			</motion.span>
+			<motion.h2
+				className="font-bold text-xl lg:text-[40px] leading-[120%] text-theme-dark"
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				viewport={{ once: true }}
+				transition={{ duration: 0.5, delay: 0.4 }}
+			>
 				{title}
-			</h2>
-		</div>
+			</motion.h2>
+		</motion.div>
 	);
 }
