@@ -23,4 +23,14 @@ interface IWorkingStep {
 	border: boolean;
 }
 
-export type { ISecurity, IFeature, IWorkingStep };
+interface IPricingPlan {
+	id: number;
+	name: string;
+	subTitle: string;
+	price: string;
+	billingCycle: string;
+	features: string[];
+	purchaseText: string;
+}
+
+export type { ISecurity, IFeature, IWorkingStep, IPricingPlan };

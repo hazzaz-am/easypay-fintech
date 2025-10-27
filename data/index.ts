@@ -7,7 +7,7 @@ import downloadIcon from "/public/images/how-works/download-pay-icon.png";
 import bankCardIcon from "/public/images/how-works/bank-card-icon.png";
 import payIcon from "/public/images/how-works/paying-icon.png";
 
-import { IFeature, ISecurity, IWorkingStep } from "@/types";
+import { IFeature, IPricingPlan, ISecurity, IWorkingStep } from "@/types";
 
 // All Security Services Easy Pay provide
 export const securityServices: ISecurity[] = [
@@ -118,6 +118,51 @@ export const workingSteps: IWorkingStep[] = [
 			"Easily split bills, send money to friends, and make smooth online payments instantly.",
 		icon: payIcon,
 		border: false,
+	},
+];
+
+// Pricing plans
+export const pricingPlans: IPricingPlan[] = [
+	{
+		id: 1,
+		name: "Free Plan",
+		subTitle: "Free for personal payments.",
+		price: "0",
+		billingCycle: "month",
+		features: [
+			"Up to 100 transactions per month",
+			"Basic fraud protection",
+			"Email support",
+		],
+		purchaseText: "Get Free Plan",
+	},
+	{
+		id: 2,
+		name: "Advanced",
+		subTitle: "Minimal fees for advanced transactions",
+		price: "19",
+		billingCycle: "month",
+		features: [
+			"Up to 1000 transactions per month",
+			"Advanced fraud protection",
+			"Detailed transaction reports",
+			"Priority email & chat support",
+		],
+		purchaseText: "Get Advanced Plan",
+	},
+	{
+		id: 3,
+		name: "Business",
+		subTitle: "Premium business transactions",
+		price: "29",
+		billingCycle: "month",
+		features: [
+			"Unlimited transactions per month",
+			"Premium fraud protection",
+			"Detailed transaction reports",
+			"Priority email & chat support",
+		],
+		purchaseText: "Get Business Plan",
 	},
 ];
 
