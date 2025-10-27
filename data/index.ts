@@ -10,8 +10,17 @@ import payIcon from "/public/images/how-works/paying-icon.png";
 import client1 from "/public/images/clients/testimonial-men-1.png";
 import client2 from "/public/images/clients/testimonial-men-2.png";
 
+import digitalWallet from "/public/images/insights/digitalWallet.jpg";
+import payments from "/public/images/insights/payments.jpg";
+import cryptoCurrency from "/public/images/insights/cryptocurrency.jpg";
+import paymentApps from "/public/images/insights/paymentApps.jpg";
+import smallBusiness from "/public/images/insights/smallBusiness.jpg";
+import aiPowerd from "/public/images/insights/aiPowerd.jpg";
+
 import {
+	IFAQ,
 	IFeature,
+	IInsight,
 	IPricingPlan,
 	ISecurity,
 	ITestimonial,
@@ -216,6 +225,122 @@ export const testimonials: ITestimonial[] = [
 			position: "Product Designer",
 			image: client2,
 		},
+	},
+];
+
+// faq data
+export const faqData: IFAQ[] = [
+	{
+		id: 1,
+		question: "How do I create an Easy Pay account?",
+		answer:
+			"Creating an Easy Pay account is quick and simple. Download our app from the App Store or Google Play, tap 'Sign Up', and follow the prompts to enter your basic information. You'll need to verify your email address and phone number, then link a bank account or card to start making transactions securely.",
+	},
+	{
+		id: 2,
+		question: "What are the transaction fees?",
+		answer:
+			"Easy Pay offers competitive and transparent pricing. Personal transfers are free for up to 100 transactions per month on the Free Plan. Our Advanced Plan ($19/month) and Business Plan ($29/month) offer higher limits and reduced fees. There are no hidden charges, and you can always view our full fee schedule in the app settings.",
+	},
+	{
+		id: 3,
+		question: "Is my money safe with Easy Pay?",
+		answer:
+			"Absolutely. Easy Pay uses bank-level encryption and security measures to protect your financial data. We employ two-factor authentication, biometric access, end-to-end encryption, and 24/7 fraud monitoring. Your money is protected at every step, and we're compliant with all financial regulations to ensure your peace of mind.",
+	},
+	{
+		id: 4,
+		question: "How long do transfers take?",
+		answer:
+			"Transfer times vary by destination and method. Instant transfers to other Easy Pay users happen in seconds. Bank transfers typically complete within 1-3 business days, while international transfers can take 3-5 business days. You'll always receive real-time updates and notifications about your transaction status.",
+	},
+	{
+		id: 5,
+		question: "Can I use Easy Pay internationally?",
+		answer:
+			"Yes! Easy Pay supports international transfers to over 100 countries. You can send and receive money globally with competitive exchange rates and transparent fees. Simply select the recipient's country, enter the amount, and we'll show you the exact exchange rate and any applicable fees before you confirm the transfer.",
+	},
+	{
+		id: 6,
+		question: "What if I have an issue with a transaction?",
+		answer:
+			"Our customer support team is available 24/7 to help resolve any transaction issues. You can contact us through in-app chat, email, or phone. We also have comprehensive fraud protection, and if you notice any unauthorized transactions, report them immediately through the app and we'll investigate right away.",
+	},
+];
+
+// Insights data
+export const insights: IInsight[] = [
+	{
+		id: 1,
+		image: digitalWallet,
+		category: "Security",
+		categoryColor: "#37c390",
+		title: "5 Essential Tips to Protect Your Digital Wallet",
+		excerpt:
+			"Learn the best practices for keeping your digital assets safe and secure in today's connected world.",
+		author: "Sarah Johnson",
+		date: "Mar 15, 2024",
+		readTime: "5 min read",
+	},
+	{
+		id: 2,
+		image: payments,
+		category: "Innovation",
+		categoryColor: "#2e68fd",
+		title: "The Future of Contactless Payments in 2024",
+		excerpt:
+			"Discover how contactless payment technology is revolutionizing the way we handle transactions.",
+		author: "Michael Chen",
+		date: "Mar 12, 2024",
+		readTime: "7 min read",
+	},
+	{
+		id: 3,
+		image: cryptoCurrency,
+		category: "Finance",
+		categoryColor: "#932efa",
+		title: "Understanding Cryptocurrency Integration in Modern Banking",
+		excerpt:
+			"A comprehensive guide to how traditional banks are adopting cryptocurrency technologies.",
+		author: "Emily Rodriguez",
+		date: "Mar 10, 2024",
+		readTime: "10 min read",
+	},
+	{
+		id: 4,
+		image: paymentApps,
+		category: "Tips & Tricks",
+		categoryColor: "#ff6b6b",
+		title: "Maximizing Rewards with Digital Payment Apps",
+		excerpt:
+			"Smart strategies to get the most out of your digital wallet rewards and cashback programs.",
+		author: "David Park",
+		date: "Mar 8, 2024",
+		readTime: "6 min read",
+	},
+	{
+		id: 5,
+		image: smallBusiness,
+		category: "Business",
+		categoryColor: "#ffa500",
+		title: "How Small Businesses Can Benefit from Digital Payments",
+		excerpt:
+			"Transform your small business with modern payment solutions that customers love.",
+		author: "Lisa Thompson",
+		date: "Mar 5, 2024",
+		readTime: "8 min read",
+	},
+	{
+		id: 6,
+		image: aiPowerd,
+		category: "Technology",
+		categoryColor: "#4ecdc4",
+		title: "AI-Powered Fraud Detection: The Next Frontier",
+		excerpt:
+			"Exploring how artificial intelligence is making digital payments safer than ever before.",
+		author: "James Wilson",
+		date: "Mar 1, 2024",
+		readTime: "9 min read",
 	},
 ];
 

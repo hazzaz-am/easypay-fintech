@@ -43,4 +43,22 @@ interface ITestimonial {
 	};
 }
 
-export type { ISecurity, IFeature, IWorkingStep, IPricingPlan, ITestimonial };
+interface IFAQ {
+	id: number;
+	question: string;
+	answer: string;
+}
+
+interface IInsight {
+	id: number;
+	image: StaticImageData;
+	category: string;
+	categoryColor: string;
+	title: string;
+	excerpt: string;
+	author: string;
+	date: string;
+	readTime: string;
+}
+
+export type { ISecurity, IFeature, IWorkingStep, IPricingPlan, ITestimonial, IFAQ, IInsight };
