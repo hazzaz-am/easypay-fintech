@@ -5,7 +5,7 @@ import FeaturesList from "./FeaturesList";
 export default function Features() {
 	return (
 		<>
-			<section className="max-w-[1170px] mx-auto px-4">
+			<section id="features" className="max-w-[1170px] pt-[120px] mx-auto px-4">
 				<SectionHeader
 					subTitle="features"
 					title="Why choose Easy Pay for effortless payments?"

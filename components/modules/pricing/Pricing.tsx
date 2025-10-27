@@ -3,7 +3,7 @@ import PricingList from "./PricingList";
 
 export default function Pricing() {
 	return (
-		<section className="max-w-[1170px] mx-auto mb-[120px] px-4">
+		<section id="pricing" className="max-w-[1170px] mx-auto py-[120px] px-4">
 			<SectionHeader
 				subTitle="PRICING"
 				title="Simple transparent pricing no hidden fees "

@@ -6,7 +6,7 @@ import StepList from "./StepList";
 
 export default function WorkingSteps() {
 	return (
-		<section className="bg-[#F6F6F6] py-[120px] px-4">
+		<section id="benefits" className="bg-[#F6F6F6] py-[120px] px-4">
 			<div className="max-w-[1170px] mx-auto">
 				<div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-12">
 					<SectionHeader

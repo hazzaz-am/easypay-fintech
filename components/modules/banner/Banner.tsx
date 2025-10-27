@@ -1,9 +1,9 @@
 import Image from "next/image";
 import appStore from "/public/images/hero/appStore.png";
-import playStore from "/public/images/hero/playStore.png";
 import bannerProfile from "/public/images/hero/bannerImg.png";
 import underline from "/public/images/hero/underline.png";
 import Navbar from "@/components/common/navbar/Navbar";
+import playStore from "/public/images/hero/playStore.png"
 
 export default function Banner() {
 	return (
@@ -14,7 +14,7 @@ export default function Banner() {
 				backgroundPosition: "center",
 				backgroundRepeat: "no-repeat",
 			}}
-			className="m-6 rounded-3xl mb-[120px]"
+			className="m-6 rounded-3xl"
 		>
 			<div className="max-w-[1170px] mx-auto px-4">
 				<Navbar />
