@@ -158,23 +158,45 @@ h6 {
 .embla {
 	margin: auto;
 	--slide-height: 19rem;
-	--slide-spacing: 1rem;
-	--slide-size: 419px;
+	--slide-spacing: 0.75rem;
+	--slide-size: 280px;
 }
+
+@media (min-width: 640px) {
+	.embla {
+		--slide-spacing: 1rem;
+		--slide-size: 340px;
+	}
+}
+
+@media (min-width: 768px) {
+	.embla {
+		--slide-size: 380px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.embla {
+		--slide-size: 419px;
+	}
+}
+
 .embla__viewport {
 	overflow: hidden;
 }
 .embla__container {
 	display: flex;
-	gap: 8px;
+	gap: var(--slide-spacing);
 	touch-action: pan-y pinch-zoom;
-	margin-left: calc(var(--slide-spacing) * -1);
 }
 .embla__slide {
 	transform: translate3d(0, 0, 0);
 	flex: 0 0 var(--slide-size);
 	min-width: 0;
-	padding-left: var(--slide-spacing);
+}
+
+.embla__slide:first-child {
+	margin-left: var(--slide-spacing);
 }
 
 .embla__controls {

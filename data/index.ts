@@ -7,7 +7,16 @@ import downloadIcon from "/public/images/how-works/download-pay-icon.png";
 import bankCardIcon from "/public/images/how-works/bank-card-icon.png";
 import payIcon from "/public/images/how-works/paying-icon.png";
 
-import { IFeature, IPricingPlan, ISecurity, IWorkingStep } from "@/types";
+import client1 from "/public/images/clients/testimonial-men-1.png";
+import client2 from "/public/images/clients/testimonial-men-2.png";
+
+import {
+	IFeature,
+	IPricingPlan,
+	ISecurity,
+	ITestimonial,
+	IWorkingStep,
+} from "@/types";
 
 // All Security Services Easy Pay provide
 export const securityServices: ISecurity[] = [
@@ -163,6 +172,50 @@ export const pricingPlans: IPricingPlan[] = [
 			"Priority email & chat support",
 		],
 		purchaseText: "Get Business Plan",
+	},
+];
+
+// testimonials data
+export const testimonials: ITestimonial[] = [
+	{
+		id: 1,
+		content:
+			"Experience a payment app built on simplicity and transparency. No hidden fees, just a seamless user experience that makes every transaction easy and stress-free. Say goodbye to confusion and hello to straightforward payments.",
+		client: {
+			name: "Ethan Williams",
+			position: "Digital Marketing Specialist",
+			image: client1,
+		},
+	},
+	{
+		id: 2,
+		content:
+			"Discover a payment app focused on simplicity and transparency. Enjoy a seamless experience with no hidden fees, providing clarity and ease in every transaction. It’s designed to put you in control of your payments.",
+		client: {
+			name: "Daniel Thompson",
+			position: "Product Designer",
+			image: client2,
+		},
+	},
+	{
+		id: 3,
+		content:
+			"Experience a payment app built on simplicity and transparency. No hidden fees, just a seamless user experience that makes every transaction easy and stress-free. Say goodbye to confusion and hello to straightforward payments.",
+		client: {
+			name: "Ethan Williams",
+			position: "Digital Marketing Specialist",
+			image: client1,
+		},
+	},
+	{
+		id: 4,
+		content:
+			"Discover a payment app focused on simplicity and transparency. Enjoy a seamless experience with no hidden fees, providing clarity and ease in every transaction. It’s designed to put you in control of your payments.",
+		client: {
+			name: "Daniel Thompson",
+			position: "Product Designer",
+			image: client2,
+		},
 	},
 ];
 

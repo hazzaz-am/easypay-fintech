@@ -5,9 +5,8 @@ import { EmblaOptionsType, EmblaCarouselType } from "embla-carousel";
 import { usePrevNextButtons } from "./CarouselArrowButtons";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
-import SectionHeader from "@/components/common/SectionHeader";
-import { NextButton, PrevButton } from "./CarouselArrowButtons";
-import Carousel from "./Carousel";
+import SectionContent from "./SectionContent";
+import TestimonialCarousel from "./TestimonialCarousel";
 
 const OPTIONS: EmblaOptionsType = {
 	align: "start",
@@ -38,36 +37,17 @@ export default function Testimonial() {
 	} = usePrevNextButtons(emblaApi, onNavButtonClick);
 
 	return (
-		<section className="py-[120px] bg-[#F6F6F6] flex items-center justify-between">
-			<div className="ml-auto w-[585px]">
-				<SectionHeader
-					subTitle="TESTIMONIAL"
-					title="We’ve build trust with reviews from real users"
-          className="max-w-[537px]"
-				/>
-				<p className="max-w-[549px] text-base leading-[150%] text-theme-gray">
-					Boost your credibility by featuring genuine testimonials from real
-					users, showcasing their positive experiences and satisfaction with
-					Monks Pay services.
-				</p>
-				<div className="embla__controls">
-					<div className="embla__buttons flex gap-2">
-						<PrevButton
-							onClick={onPrevButtonClick}
-							disabled={prevBtnDisabled}
-						/>
-						<NextButton
-							onClick={onNextButtonClick}
-							disabled={nextBtnDisabled}
-						/>
-					</div>
+		<section className="bg-[#F6F6F6] py-12 md:py-16 lg:py-[120px] mb-[120px] overflow-x-hidden">
+			<div className="max-w-[1170px] mx-auto px-4">
+				<div className="xl:flex xl:items-center xl:gap-8">
+					<SectionContent
+						onPrevButtonClick={onPrevButtonClick}
+						onNextButtonClick={onNextButtonClick}
+						prevBtnDisabled={prevBtnDisabled}
+						nextBtnDisabled={nextBtnDisabled}
+					/>
+					<TestimonialCarousel options={OPTIONS} emblaRef={emblaRef} />
 				</div>
-			</div>
-			<div className="w-1/2" style={{
-        backgroundImage: "url('/images/pricing/bg-shades-round.png')",
-        backgroundPosition: "center"
-      }}>
-				<Carousel options={OPTIONS} emblaRef={emblaRef} />
 			</div>
 		</section>
 	);

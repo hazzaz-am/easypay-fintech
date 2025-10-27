@@ -33,4 +33,14 @@ interface IPricingPlan {
 	purchaseText: string;
 }
 
-export type { ISecurity, IFeature, IWorkingStep, IPricingPlan };
+interface ITestimonial {
+	id: number;
+	content: string;
+	client: {
+		name: string;
+		position: string;
+		image: StaticImageData;
+	};
+}
+
+export type { ISecurity, IFeature, IWorkingStep, IPricingPlan, ITestimonial };
