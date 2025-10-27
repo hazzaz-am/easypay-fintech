@@ -3,6 +3,7 @@
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { motion, Variants } from "motion/react";
 import { Button } from "../../ui/button";
 import Logo from "../Logo";
 import MobileMenuOverlay from "./MobileMenuOverlay";
@@ -13,6 +14,44 @@ const navigationLinks = [
 	{ name: "Security", href: "#security" },
 	{ name: "Benefits", href: "#benefits" },
 ];
+
+const navbarVariants: Variants = {
+	hidden: { y: -100, opacity: 0 },
+	visible: {
+		y: 0,
+		opacity: 1,
+		transition: {
+			duration: 0.6,
+			ease: "easeOut",
+			staggerChildren: 0.1,
+		},
+	},
+};
+
+const navLinkVariants: Variants = {
+	hidden: { y: -20, opacity: 0 },
+	visible: {
+		y: 0,
+		opacity: 1,
+		transition: {
+			duration: 0.4,
+			ease: "easeOut",
+		},
+	},
+};
+
+const buttonVariants: Variants = {
+	hidden: { scale: 0, opacity: 0 },
+	visible: {
+		scale: 1,
+		opacity: 1,
+		transition: {
+			duration: 0.5,
+			ease: "backOut",
+			delay: 0.4,
+		},
+	},
+};
 
 export default function Navbar() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,8 +65,14 @@ export default function Navbar() {
 	};
 
 	const renderNavLinks = (isMobile = false) => {
-		return navigationLinks.map((link) => (
-			<li key={link.name}>
+		return navigationLinks.map((link, index) => (
+			<motion.li
+				key={link.name}
+				variants={navLinkVariants}
+				initial="hidden"
+				animate="visible"
+				custom={index}
+			>
 				<Link
 					href={link.href}
 					onClick={isMobile ? closeMobileMenu : undefined}
@@ -44,36 +89,60 @@ export default function Navbar() {
 				>
 					{link.name}
 				</Link>
-			</li>
+			</motion.li>
 		));
 	};
 
 	return (
 		<>
-			<nav className="flex items-center justify-between py-6 lg:h-[121px] h-20 relative">
-				<Logo />
+			<motion.nav
+				className="flex items-center justify-between py-6 lg:h-[121px] h-20 relative"
+				variants={navbarVariants}
+				initial="hidden"
+				animate="visible"
+			>
+				<motion.div variants={navLinkVariants}>
+					<Logo />
+				</motion.div>
 
 				{/* Desktop Navigation */}
-				<menu className="hidden lg:flex space-x-8">{renderNavLinks()}</menu>
+				<motion.menu
+					className="hidden lg:flex space-x-8"
+					variants={navbarVariants}
+					initial="hidden"
+					animate="visible"
+				>
+					{renderNavLinks()}
+				</motion.menu>
 
 				{/* Desktop Contact Button */}
-				<div className="hidden lg:block">
+				<motion.div
+					className="hidden lg:block"
+					variants={buttonVariants}
+					initial="hidden"
+					animate="visible"
+				>
 					<Button>Contact Us</Button>
-				</div>
+				</motion.div>
 
 				{/* Mobile Hamburger Button */}
-				<button
+				<motion.button
 					onClick={toggleMobileMenu}
 					className="lg:hidden p-2 text-theme-gray hover:text-primary transition-colors duration-300"
 					aria-label="Toggle menu"
+					variants={buttonVariants}
+					initial="hidden"
+					animate="visible"
+					whileHover={{ scale: 1.1 }}
+					whileTap={{ scale: 0.95 }}
 				>
 					{isMobileMenuOpen ? (
 						<X className="w-6 h-6" />
 					) : (
 						<Menu className="w-6 h-6" />
 					)}
-				</button>
-			</nav>
+				</motion.button>
+			</motion.nav>
 
 			<MobileMenuOverlay
 				isMobileMenuOpen={isMobileMenuOpen}
