@@ -1,10 +1,19 @@
+"use client";
+
 import SectionHeader from "@/components/common/SectionHeader";
 import { Button } from "@/components/ui/button";
 import InsightsList from "./InsightsList";
+import { motion } from "motion/react";
 
 export default function Insights() {
 	return (
-		<section className="py-[120px] bg-[#F6F6F6] px-4">
+		<motion.section
+			className="py-[120px] bg-[#F6F6F6] px-4"
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			viewport={{ once: true, amount: 0.1 }}
+			transition={{ duration: 0.6 }}
+		>
 			<div className="max-w-[1170px] mx-auto">
 				<SectionHeader
 					subTitle="INSIGHTS & RESOURCES"
@@ -14,10 +23,16 @@ export default function Insights() {
 
 				<InsightsList />
 
-				<div className="flex justify-center">
+				<motion.div
+					className="flex justify-center"
+					initial={{ opacity: 0, scale: 0.8 }}
+					whileInView={{ opacity: 1, scale: 1 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.5, delay: 0.4, ease: "backOut" }}
+				>
 					<Button>Load More Articles</Button>
-				</div>
+				</motion.div>
 			</div>
-		</section>
+		</motion.section>
 	);
 }
