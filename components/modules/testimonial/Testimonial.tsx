@@ -7,6 +7,7 @@ import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import SectionContent from "./SectionContent";
 import TestimonialCarousel from "./TestimonialCarousel";
+import { motion } from "motion/react";
 
 const OPTIONS: EmblaOptionsType = {
 	align: "start",
@@ -37,7 +38,13 @@ export default function Testimonial() {
 	} = usePrevNextButtons(emblaApi, onNavButtonClick);
 
 	return (
-		<section className="bg-[#F6F6F6] py-12 md:py-16 lg:py-[120px] mb-[120px] overflow-x-hidden">
+		<motion.section
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			viewport={{ once: true, amount: 0.1 }}
+			transition={{ duration: 0.6 }}
+			className="bg-[#F6F6F6] py-12 md:py-16 lg:py-[120px] mb-[120px] overflow-x-hidden"
+		>
 			<div className="max-w-[1170px] mx-auto px-4">
 				<div className="xl:flex xl:items-center xl:gap-8">
 					<SectionContent
@@ -49,6 +56,6 @@ export default function Testimonial() {
 					<TestimonialCarousel options={OPTIONS} emblaRef={emblaRef} />
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 }
