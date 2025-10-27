@@ -3,7 +3,7 @@ import appStore from "/public/images/hero/appStore.png";
 import bannerProfile from "/public/images/hero/bannerImg.png";
 import underline from "/public/images/hero/underline.png";
 import Navbar from "@/components/common/navbar/Navbar";
-import playStore from "/public/images/hero/playStore.png"
+import playStore from "/public/images/hero/playStoreBtn.png"
 
 export default function Banner() {
 	return (
